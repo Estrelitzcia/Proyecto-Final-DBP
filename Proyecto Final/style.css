@@ -1,0 +1,205 @@
+
+:root {
+    --color-principal: #0d6efd; 
+    --color-secundario: #ffc107;  
+    --color-oscuro: #212529;          
+    --color-claro: #f8f9fa;           
+    --fuente-titulos: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transicion-suave: all 0.3s ease-in-out;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+    --color-claro: #1e1e1e;
+}
+
+body.dark-mode .bg-light {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0;
+}
+
+body.dark-mode .card,
+body.dark-mode .accordion-item,
+body.dark-mode .modal-content,
+body.dark-mode .festividad-item { 
+    background-color: #242424 !important;
+    color: #ffffff;
+    border-color: #333333;
+}
+
+body.dark-mode .text-muted,
+body.dark-mode .text-secondary {
+    color: #b0b0b0 !important;
+}
+
+body.dark-mode .text-dark {
+    color: #ffffff !important;
+}
+
+html {
+    scroll-behavior: smooth;
+} 
+
+body {
+    font-family: var(--fuente-titulos);
+    overflow-x: hidden;
+    transition: var(--transicion-suave);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.5px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+#inicio .carousel-item {
+    height: 65vh; 
+    min-height: 350px;
+    background-color: #000;
+}
+
+#inicio .carousel-item img {
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0.75;    
+} 
+
+.capa-texto {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 20px 30px;
+    border-radius: 8px;
+    bottom: 25%;
+    backdrop-filter: blur(3px);
+    border-left: 4px solid var(--color-secundario);
+}
+
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 15px 0;
+}
+
+.destino-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transicion-suave);
+}
+
+.destino-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.festividad-item {
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    height: 100%;
+    transition: var(--transicion-suave);
+    border-left: 4px solid #dc3545 !important; 
+}
+
+.festividad-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+.festividad-img-wrapper {
+    height: 180px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.festividad-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transicion-suave);
+}
+
+.festividad-item:hover .festividad-img-wrapper img {
+    transform: scale(1.05); 
+}
+
+.border-start-3 {
+    border-left-width: 3px !important;
+}
+
+#gastronomia .card {
+    transition: var(--transicion-suave);
+}
+
+#gastronomia .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+#gastronomia .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.modal-content {
+    border-radius: 12px;
+    border: none;
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+body.dark-mode .modal-header {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animar-entrada {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+    #inicio .carousel-item {
+        height: 45vh; 
+    }
+    
+    .capa-texto {
+        bottom: 10%;
+        padding: 15px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .festividad-img-wrapper {
+        height: 220px;
+    }
+}
